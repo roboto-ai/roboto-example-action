@@ -22,7 +22,7 @@ Follow these steps to get the Action set up:
 
     Navigate to the project directory and execute the following commands:
     ```shell
-    cd robologs-example-action
+    cd robologs-example-action/tag_dataset/
     # Build the Docker image
     ./scripts/build.sh
     # Run the Action
