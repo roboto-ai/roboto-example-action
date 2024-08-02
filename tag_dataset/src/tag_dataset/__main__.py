@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
     runtime = ActionRuntime.from_env()
-    dataset = datasets.Dataset.from_id(runtime.dataset_id)
+    dataset = runtime.dataset
 
     log_path = runtime.input_dir / "log.txt"
     keyword = "error"
