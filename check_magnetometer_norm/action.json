@@ -1,0 +1,9 @@
+{
+    "name": "check_magnetometer_norm",
+    "description": "This Action checks whether the magnetometer norm exceeds a defined threshold. If so, it tags the file and creates time-bound Events to highlight the anomalies.",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    }
+}
