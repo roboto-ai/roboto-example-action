@@ -1,13 +1,16 @@
 # check_magnetometer_norm
 
-This Action checks if the magnetometer norm is above a cert
+This Roboto Action checks if a drone's magnetometer norm exceeds a defined threshold.
+
+It adds a tag to the log file if the magnetometer norm exceeds the threshold and creates Roboto Events to highlight corresponding time intervals.
+
+Note, this Action can only be run on files that have been ingested as it operates on processed topic data.
 
 ## Getting started
 
-1. Setup a virtual environment specific to this project and install development dependencies, including the `roboto` SDK: `./scripts/setup.sh`
-2. Build Docker image: `./scripts/build.sh`
-3. Run Action image locally: `./scripts/run.sh <path-to-input-data-directory>`
-4. Deploy to Roboto Platform: `./scripts/deploy.sh`
+1. Setup Action environment and install dev dependencies: `./scripts/setup.sh`
+2. Build Action image: `./scripts/build.sh`
+3. Deploy Action to Roboto: `./scripts/deploy.sh`
 
 ## Action configuration file
 

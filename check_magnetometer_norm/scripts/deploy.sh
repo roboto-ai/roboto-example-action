@@ -17,7 +17,7 @@ if [ $# -gt 0 ]; then
     org_id=$1  
 fi
 
-roboto_exe="$PACKAGE_ROOT/.venv/bin/roboto"
+roboto_exe="$PACKAGE_ROOT/.venv/bin/roboto --profile=prod"
 
 echo "Pushing check_magnetometer_norm:latest to Roboto's private registry"
 image_push_args=(

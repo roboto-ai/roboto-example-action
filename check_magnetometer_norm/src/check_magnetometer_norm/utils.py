@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 
-def find_magnetometer_anomaly_events(mag_df, window_size=50, threshold_ratio=0.05):
+def identify_mag_norm_spikes(mag_df, window_size=50, threshold_ratio=0.05):
     """
-    Finds intervals where rolling std of magnetometer norm exceeds a threshold.
+    Identify intervals where rolling std of magnetometer norm exceeds a threshold.
     """
     if not {'x', 'y', 'z'}.issubset(mag_df.columns):
         raise ValueError("mag_df must have 'x', 'y', and 'z' columns.")
