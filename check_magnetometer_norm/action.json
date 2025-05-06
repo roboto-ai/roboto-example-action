@@ -1,0 +1,10 @@
+{
+    "name": "check_magnetometer_norm",
+    "description": "Checks if a drone's magnetometer norm exceeds a defined threshold. If so, it tags the file and creates Events to highlight corresponding time intervals.",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    },
+    "requires_downloaded_inputs": false
+}

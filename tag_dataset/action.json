@@ -1,6 +1,6 @@
 {
     "name": "tag_dataset",
-    "description": "This Action adds a tag to a dataset if a specific string is present in a log file",
+    "description": "This Action adds a tag to a Dataset if a specified string is present in a log file",
     "compute_requirements": {
         "vCPU": 512,
         "memory": 1024,
