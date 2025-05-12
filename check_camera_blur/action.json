@@ -1,0 +1,9 @@
+{
+    "name": "check_camera_blur",
+    "description": "Checks if a camera is out of focus. If so, it tags the file and creates Events to highlight corresponding time intervals.",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    }
+}
