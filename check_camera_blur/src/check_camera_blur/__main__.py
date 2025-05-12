@@ -30,7 +30,10 @@ for file, path in inputs.files:
         img = convert_image_msg_to_cv2(image_msg)
         timestamp = image_msg["log_time"]
         blur_info[timestamp] = is_blurry(img, threshold=BLUR_THRESHOLD)
-        
+
+    if any(blur_info.values()):
+        file.put_tags(["camera_blur", "needs_review"])
+
     event_tuples = create_blur_events_from_dict(blur_info, runtime.org_id, topic)
 
     for start_time, end_time in event_tuples:
