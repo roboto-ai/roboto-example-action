@@ -1,4 +1,10 @@
-def create_blur_events_from_dict(blur_info, org_id, topic):
+import numpy as np
+import cv2
+
+def to_cv2_img(msg):
+    return cv2.imdecode(np.frombuffer(msg["data"], np.uint8), cv2.IMREAD_COLOR)
+
+def get_blur_events(blur_info):
     """
     Scan the `blur_info` dictionary (key is timestamp, value is bool indicating blur)
     and return a list of event tuples (start_time, end_time) for each blurry stretch.
