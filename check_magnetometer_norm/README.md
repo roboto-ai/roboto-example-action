@@ -2,7 +2,7 @@
 
 This Roboto Action checks if a drone's magnetometer norm exceeds a defined threshold.
 
-It adds a tag to the log file if the magnetometer norm exceeds the threshold and creates Roboto Events to highlight corresponding time intervals.
+It adds a tag to the log file if the norm exceeds the threshold and creates Roboto Events to highlight the corresponding time intervals.
 
 Note, this Action can only be run on files that have been ingested as it operates on processed topic data.
 
@@ -10,7 +10,8 @@ Note, this Action can only be run on files that have been ingested as it operate
 
 1. Setup Action environment and install dev dependencies: `./scripts/setup.sh`
 2. Build Action image: `./scripts/build.sh`
-3. Deploy Action to Roboto: `./scripts/deploy.sh`
+3. Run Action locally to test: `./scripts/run.sh` (re: `test/input-manifest.txt`)
+4. Deploy Action to Roboto: `./scripts/deploy.sh`
 
 ## Action configuration file
 

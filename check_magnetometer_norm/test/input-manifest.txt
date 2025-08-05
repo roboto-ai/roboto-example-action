@@ -1,0 +1,22 @@
+{
+    "files": [
+        [
+            {
+                "association_id": "ds_rhq4frqm2tw9",
+                "created": "2024-11-28T11:12:45.039877Z",
+                "created_by": "yves@roboto.ai",
+                "file_id": "fl_y4thd7ag228i2gvq7d0m",
+                "modified": "2025-08-05T14:22:18.761556Z",
+                "modified_by": "benji@roboto.ai",
+                "name": "6d3c6ab3-d970-4261-890b-685ba4d8f49e.ulg",
+                "org_id": "og_ghla0xxceeg8",
+                "relative_path": "6d3c6ab3-d970-4261-890b-685ba4d8f49e.ulg",
+                "size": 4981571,
+                "uri": "s3://.../6d3c6ab3-d970-4261-890b-685ba4d8f49e.ulg",
+                "version": 6
+            },
+            "/input/6d3c6ab3-d970-4261-890b-685ba4d8f49e.ulg"
+        ]
+    ],
+    "topics": []
+}
