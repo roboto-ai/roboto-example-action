@@ -27,14 +27,13 @@ git clone https://github.com/roboto-ai/roboto-example-action.git
 Navigate into one of the top-level Action directories in this package, e.g.
 
 ```shell
-cd roboto-example-action/tag_dataset
+cd roboto-example-action/tag-dataset
 ```
 
 Then build and deploy the Action:
 
 ```shell
 ./scripts/setup.sh
-./scripts/build.sh
 ./scripts/deploy.sh
 ```
 

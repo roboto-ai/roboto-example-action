@@ -1,0 +1,16 @@
+{
+    "name": "tag-dataset",
+    "description": "This action adds a tag to a dataset if a specified string is present in a log file.",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    },
+    "parameters": [
+        {
+            "name": "keyword",
+            "description": "The keyword to search for in log files",
+            "default": "ERROR"
+        }
+    ]
+}

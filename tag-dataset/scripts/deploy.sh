@@ -7,9 +7,12 @@ PACKAGE_ROOT=$(dirname "${SCRIPTS_ROOT}")
 
 # Early exit if virtual environment does not exist and/or roboto is not yet installed
 if [ ! -f "$PACKAGE_ROOT/.venv/bin/roboto" ]; then
-    echo "Virtual environment with roboto CLI does not exist. Please run ./scripts/setup.sh first."
+    echo "Virtual environment with roboto SDK does not exist. Please run ./scripts/setup.sh first."
     exit 1
 fi
+
+echo "Building container image"
+$SCRIPTS_ROOT/build.sh --quiet
 
 # Set org_id to $ROBOTO_ORG_ID if defined, else the first argument passed to this script
 org_id=${ROBOTO_ORG_ID:-}
@@ -38,7 +41,7 @@ if [ $image_push_ret_code -ne 0 ]; then
     exit 1
 fi
 
-echo "Creating tag_dataset action"
+echo "Creating/updating tag_dataset action"
 create_args=(
   --from-file $PACKAGE_ROOT/action.json
   --image $image_uri
