@@ -17,6 +17,7 @@ def main(context: roboto.InvocationContext) -> None:
 
         topic = file.get_topic("sensor_mag")
         mag_df = topic.get_data_as_df(["x", "y", "z"])
+
         mag_norm: np.typing.NDArray = np.linalg.norm(
             mag_df[["x", "y", "z"]].values, axis=1
         )
