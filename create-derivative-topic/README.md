@@ -10,8 +10,6 @@ Note, this action can only be run on ULog files that have been ingested in Robot
 
 To try it out, download the public sample ULog [6d3c6ab3-d970-4261-890b-685ba4d8f49e.ulg](https://app.roboto.ai/visualize?file=fl_y4thd7ag228i2gvq7d0m) (in [ds_rhq4frqm2tw9](app.roboto.ai/datasets/ds_rhq4frqm2tw9)). Upload it to a dataset in your own account, wait for it to ingest, and then run this action on it.
 
-> **Note**: This README was generated from a template. Please customize it to describe what this specific action does: its inputs, outputs, parameters, and/or usage instructions.
-
 ## Table of Contents
 
 - [Quick Start](#quick-start)
