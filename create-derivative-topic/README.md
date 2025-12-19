@@ -4,7 +4,7 @@ This Roboto Action serves as a reference implementation for creating **derivativ
 
 It demonstrates how to generate new, continuous time-series signals stored in dataframes and associate them with a file in Roboto.
 
-The specific example takes data from two existing topis: `vehicle_local_position` and `vehicle_local_position_setpoints`, and produces a derivative topic called `setpoints_tracking_error`.
+The specific example takes data from two existing topis: `vehicle_local_position` and `vehicle_local_position_setpoint`, and produces a derivative topic called `setpoints_tracking_error`.
 
 Note, this action can only be run on ULog files that have been ingested in Roboto as it operates on processed topic data.
 
