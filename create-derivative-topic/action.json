@@ -1,0 +1,10 @@
+{
+    "name": "create-derivative-topic",
+    "description": "Creates a derivative topic with position error from vehicle setpoints",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    },
+    "parameters": []
+}
