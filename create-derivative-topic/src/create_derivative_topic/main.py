@@ -41,3 +41,6 @@ def main(context: roboto.InvocationContext) -> None:
                 timestamp_unit="ns"
             )
             logger.info(f"Created derivative topic: {tracking_error_topic.topic_name}")
+        else:
+            logger.info("Skipping topic creation in dry run mode")
+

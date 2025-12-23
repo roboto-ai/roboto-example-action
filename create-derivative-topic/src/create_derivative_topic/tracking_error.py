@@ -27,6 +27,5 @@ def get_tracking_error(position_df, setpoint_df):
     
     res_df['horiz_error'] = (res_df['err_x']**2 + res_df['err_y']**2)**0.5
     res_df['vert_error'] = res_df['err_z'].abs()
-    res_df.fillna(0, inplace=True)
     
     return res_df
