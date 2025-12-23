@@ -1,8 +1,10 @@
-# Check Magnetometer Norm
+# create-derivative-topic
 
-This Roboto Action checks if a drone's magnetometer norm exceeds a defined threshold.
+This Roboto Action serves as a reference implementation for creating **derivative topics** from existing topic data.
 
-It adds a tag to the log file if the norm exceeds the threshold and creates Roboto Events to highlight the corresponding time intervals.
+It demonstrates how to create new, continuous time-series signals stored in dataframes and associate them with a file in Roboto.
+
+The specific example takes data from two existing topis: `vehicle_local_position` and `vehicle_local_position_setpoint`, and produces a derivative topic called `setpoint_tracking_error`.
 
 Note, this action can only be run on ULog files that have been ingested in Roboto as it operates on processed topic data.
 
@@ -53,7 +55,7 @@ $ .venv/bin/roboto users whoami
 Example invocation:
 ```bash
 $ .venv/bin/roboto --log-level=info actions invoke-local \
-    --file-query="dataset_id='<ID>' AND path LIKE '%.ulg'" \
+    --file-query="dataset_id='<ID>' AND path LIKE '%.mcap'" \
     --dry-run
 ```
 
@@ -72,8 +74,8 @@ $ .venv/bin/roboto actions invoke-local --help
 Example invocation:
 ```bash
 $ .venv/bin/roboto actions invoke \
-    --file-query="dataset_id='<ID>' AND path LIKE '%.ulg'" \
-    check-magnetometer-norm  # Note required action name parameter for hosted invocation
+    --file-query="dataset_id='<ID>' AND path LIKE '%.mcap'" \
+    create-derivative-topic  # Note required action name parameter for hosted invocation
 ```
 
 
