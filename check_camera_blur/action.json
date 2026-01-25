@@ -1,0 +1,19 @@
+{
+    "name": "check_camera_blur",
+    "description": "Checks if a camera is out of focus. If so, it tags the file and creates Events to highlight corresponding time intervals.",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    },
+    "parameters": [
+        {
+            "name": "BLUR_THRESHOLD",
+            "required": false,
+            "description": "The threshold parameter defines the sensitivity for detecting blurriness in an image",
+            "default": 20
+        }
+    ],
+
+    "requires_downloaded_inputs": false
+}
