@@ -70,7 +70,7 @@ Example invocation:
 ```bash
 $ .venv/bin/roboto actions invoke \
     --file-query="dataset_id='<ID>' AND path LIKE '%.mcap'" \
-    create-ai-summary  # Note required action name parameter for hosted invocation
+    create_ai_summary  # Note required action name parameter for hosted invocation
 ```
 
 
