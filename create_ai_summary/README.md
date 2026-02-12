@@ -1,6 +1,6 @@
 # Dataset-Summary-Example
 
-An example how Roboto Actions can be used to generate AI summaries of datasets
+An example of how Roboto Actions can be used to generate AI summaries of datasets
 
 
 > **Note**: This README was generated from a template. Please customize it to describe what this specific action does: its inputs, outputs, parameters, and/or usage instructions.
