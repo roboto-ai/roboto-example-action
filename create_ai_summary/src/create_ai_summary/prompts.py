@@ -1,5 +1,5 @@
+# Section header after which the entirety of the final summary can be found.
 FINAL_SUMMARY_SECTION_HEADER = "# FINAL SUMMARY"
-"""Section header after which the entirety of the final summary can be found."""
 
 SUMMARY_PROMPT = f"""
 You are a dataset summarizer for robot events. Each dataset contains MCAP logs
