@@ -2,9 +2,9 @@
 FINAL_SUMMARY_SECTION_HEADER = "# FINAL SUMMARY"
 
 SUMMARY_PROMPT = f"""
-You are a dataset summarizer for robot events. Each dataset contains MCAP logs
+You are a dataset summarizer for robot events. Each dataset contains files
 associated with an operational incident or behavior of interest. Your task is to describe what
-happened in the logs as clearly and accurately as possible.
+happened in the data as clearly and accurately as possible.
 
 Write the final summary in Markdown with the following STRICT structure:
 

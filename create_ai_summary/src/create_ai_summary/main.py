@@ -1,12 +1,10 @@
 import roboto
 import whenever
-from roboto import Dataset, File
+from roboto import Dataset
 from roboto.domain import actions
 
 from .ai_summarizer import CustomDatasetSummarizer
 from .logger import logger
-
-MCAP_GLOB = "**/*.mcap"
 
 
 def determine_dataset(context: roboto.InvocationContext) -> Dataset | None:
@@ -20,10 +18,6 @@ def determine_dataset(context: roboto.InvocationContext) -> Dataset | None:
 
     first_file, _ = next(iter(files))
     return Dataset.from_id(first_file.dataset_id, roboto_client=context.roboto_client)
-
-
-def list_mcap_files(dataset: Dataset) -> list[File]:
-    return list(dataset.list_files(include_patterns=[MCAP_GLOB]))
 
 
 def main(context: roboto.InvocationContext) -> None:
@@ -41,13 +35,13 @@ def main(context: roboto.InvocationContext) -> None:
         return
 
     ds_id = dataset.dataset_id
-    recordings = list_mcap_files(dataset)
+    files = list(dataset.list_files())
 
-    logger.info("Found %d MCAP file(s) in dataset %s.", len(recordings), ds_id)
+    logger.info("Found %d file(s) in dataset %s.", len(files), ds_id)
     logger.info("Generating AI summary for dataset %s...", ds_id)
 
     summarizer = CustomDatasetSummarizer.from_invocation_context(context)
-    ai_summary = summarizer.summarize(dataset, recordings)
+    ai_summary = summarizer.summarize(dataset, files)
 
     if context.is_dry_run:
         logger.info("[dry run] Skipping setting AI summary on dataset %s.", ds_id)

@@ -50,7 +50,7 @@ $ .venv/bin/roboto users whoami
 Example invocation:
 ```bash
 $ .venv/bin/roboto --log-level=info actions invoke-local \
-    --file-query="dataset_id='<ID>' AND path LIKE '%.mcap'" \
+    --dataset=<ID> \
     --dry-run
 ```
 
@@ -69,7 +69,7 @@ $ .venv/bin/roboto actions invoke-local --help
 Example invocation:
 ```bash
 $ .venv/bin/roboto actions invoke \
-    --file-query="dataset_id='<ID>' AND path LIKE '%.mcap'" \
+    --dataset=<ID> \
     create_ai_summary  # Note required action name parameter for hosted invocation
 ```
 
