@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "create_ai_summary"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "roboto[analytics]>=0.33.0",
+    "whenever",
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]

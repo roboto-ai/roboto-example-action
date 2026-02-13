@@ -1,0 +1,10 @@
+{
+    "name": "create_ai_summary",
+    "description": "An example of how Roboto Actions can be used to generate AI summaries of datasets",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    },
+    "parameters": []
+}
