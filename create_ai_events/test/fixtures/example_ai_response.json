@@ -1,0 +1,30 @@
+{
+  "dataset_id": "ds_example_fixture",
+  "data": [
+    {
+      "start": 1704067200000000000,
+      "end": 1704067203000000000,
+      "name": "Executive Operation Failed",
+      "description": "At +3.7s the executive reports the operation failed (error.code = 2, error.message = 'Behavior Tree failed execution'). The /proto/executive_operation_state topic shows a transition from RUNNING to FAILED state. Simultaneously, the /diagnostics topic reports multiple subsystem errors including navigation timeout and sensor degradation. This failure correlates with the robot attempting a complex manipulation task while the battery level dropped below 15% as shown in /battery_state.",
+      "severity": 4,
+      "message_path_ids": [
+        "mp_executive_operation_state",
+        "mp_diagnostics",
+        "mp_battery_state"
+      ]
+    },
+    {
+      "start": 1704067210000000000,
+      "end": 1704067215000000000,
+      "name": "Recovery Attempt Initiated",
+      "description": "Following the previous failure, the system initiated an automatic recovery sequence. The /proto/executive_operation_state shows a transition to RECOVERING state at +10.0s. The recovery manager published a new plan on /recovery_plan with strategy 'RETRY_WITH_REDUCED_CONSTRAINTS'. During this interval, the robot moved to a safe position as evidenced by velocity commands on /cmd_vel dropping to near-zero values.",
+      "severity": 3,
+      "message_path_ids": [
+        "mp_executive_operation_state",
+        "mp_recovery_plan",
+        "mp_cmd_vel"
+      ]
+    }
+  ]
+}
+

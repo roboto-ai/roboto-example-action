@@ -1,0 +1,10 @@
+{
+    "name": "create_ai_events",
+    "description": "Create events based on AI introspection of the file.",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    },
+    "parameters": []
+}

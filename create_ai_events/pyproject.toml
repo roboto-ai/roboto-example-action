@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "create_ai_events"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "roboto[analytics]>=0.30.0",
+    "pydantic>=2.0.0",
+    "whenever",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
