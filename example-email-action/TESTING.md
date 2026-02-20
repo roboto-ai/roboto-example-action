@@ -39,7 +39,7 @@ You should see an empty inbox ready to capture emails.
 Run the action with MailHog SMTP settings:
 
 ```bash
-.venv/bin/roboto --log-level=info actions invoke-local \
+roboto --log-level=info actions invoke-local \
     --file-query="dataset_id='<DATASET_ID>'" \
     --parameter smtp_host=localhost \
     --parameter smtp_port=1025 \
@@ -94,7 +94,7 @@ If running the action in Docker and it can't connect to MailHog:
 ### Test with No Files
 
 ```bash
-.venv/bin/roboto actions invoke-local \
+roboto actions invoke-local \
     --file-query="dataset_id='nonexistent'" \
     --parameter smtp_host=localhost \
     --parameter smtp_port=1025 \
@@ -109,7 +109,7 @@ Expected: Email with subject containing "[NO FILES]"
 ### Test with Multiple Files
 
 ```bash
-.venv/bin/roboto actions invoke-local \
+roboto actions invoke-local \
     --file-query="dataset_id='<DATASET_ID>' AND path LIKE '%.mcap'" \
     --parameter smtp_host=localhost \
     --parameter smtp_port=1025 \
@@ -124,7 +124,7 @@ Expected: Email with detailed file information and "[SUCCESS]" in subject
 ### Test Custom Subject Prefix
 
 ```bash
-.venv/bin/roboto actions invoke-local \
+roboto actions invoke-local \
     --file-query="dataset_id='<DATASET_ID>'" \
     --parameter smtp_host=localhost \
     --parameter smtp_port=1025 \
