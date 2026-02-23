@@ -20,3 +20,6 @@ dist/
 
 # Workspace
 .workspace
+
+# Misc.
+.DS_Store
