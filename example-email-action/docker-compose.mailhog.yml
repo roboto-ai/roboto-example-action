@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      # SMTP server
+      - "1025:1025"
+      # Web UI
+      - "8025:8025"
+    environment:
+      MH_STORAGE: memory
+    networks:
+      - mailhog-network
+
+networks:
+  mailhog-network:
+    driver: bridge
+

@@ -1,0 +1,46 @@
+{
+    "name": "example-email-action",
+    "description": "An example action that can send emails as part of its runtime logic",
+    "compute_requirements": {
+        "vCPU": 512,
+        "memory": 1024,
+        "storage": 21
+    },
+    "parameters": [
+        {
+            "name": "smtp_host",
+            "description": "SMTP server hostname (e.g., smtp.gmail.com)",
+            "required": true
+        },
+        {
+            "name": "smtp_port",
+            "description": "SMTP server port (e.g., 587 for TLS)",
+            "required": true
+        },
+        {
+            "name": "smtp_username",
+            "description": "SMTP login username/email",
+            "required": true
+        },
+        {
+            "name": "smtp_password",
+            "description": "SMTP login password (should be a Roboto secret URI)",
+            "required": true
+        },
+        {
+            "name": "email_sender",
+            "description": "Email sender address",
+            "required": true
+        },
+        {
+            "name": "email_recipient",
+            "description": "Email recipient address",
+            "required": true
+        },
+        {
+            "name": "email_subject_prefix",
+            "description": "Prefix for the email subject line",
+            "required": true
+        }
+    ]
+}
